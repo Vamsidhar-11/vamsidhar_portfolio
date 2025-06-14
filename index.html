@@ -399,6 +399,85 @@ section, .container, body {
         left: 10px;
       }
     }
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 720px;
+  position: relative;
+  color: #e0e0e0;
+}
+
+.modal-content h2 {
+  color: var(--primary-yellow);
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.close {
+  color: #fdd835;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 720px;
+  position: relative;
+  color: #e0e0e0;
+}
+
+.modal-content h2 {
+  color: var(--primary-yellow);
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.close {
+  color: #fdd835;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
   </style>
 </head>
 <body>
@@ -545,6 +624,16 @@ section, .container, body {
   <section id="projects" data-aos="fade-up">
     <div class="section-title">Projects</div>
     <div class="projects-grid">
+      <!-- Project 6 -->
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="1200">
+      <div class="project-badge">Movie Recommendation</div>
+        <img src="m_r_th.png" alt="Movie Recommender Thumbnail">
+      <div class="project-content">
+        <h3>Movie Recommendation System</h3>
+        <p>Suggests top 5 similar movies using content-based filtering. Built with Python, Pandas, and Streamlit for real-time user input.</p><br>
+        <button class="btn" onclick="openModal('movieModal')">🎬 Watch Demo</button>
+      </div>
+      </div>
       <!-- Project 1 -->
       <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
         <div class="project-badge">Real-Time Object Detection</div>
@@ -630,5 +719,55 @@ section, .container, body {
       loop: true
     });
   </script>
+  <script>
+    function openModal(id) {
+  document.getElementById(id).style.display = "block";
+  const video = document.getElementById('movieVideo');
+  if (video) {
+    video.currentTime = 0;
+    video.play();
+  }
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+  const video = document.getElementById('movieVideo');
+  if (video) {
+    video.pause();
+  }
+}
+  </script>
+<!-- Modal for Movie Recommendation -->
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('movieModal')">&times;</span>
+    <h2>Movie Recommendation System Demo</h2>
+    <video id="movieVideo" width="100%" controls>
+      <source src="movie_recommanded_system.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <br><br>
+    <a href="https://github.com/Vamsidhar-11/movie_recommandation_system" class="btn" target="_blank">🔗 GitHub Repo</a>
+  </div>
+</div>
+
 </body>
+<script>
+  function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  modal.style.display = "none";
+
+  // Stop the video when closing modal
+  const video = modal.querySelector("video");
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+}
+
+</script>
 </html>

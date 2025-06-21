@@ -624,6 +624,15 @@ section, .container, body {
   <section id="projects" data-aos="fade-up">
     <div class="section-title">Projects</div>
     <div class="projects-grid">
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="1200">
+      <div class="project-badge">Book Recommendation</div>
+        <img src="b_r_s.png" alt="Movie Recommender Thumbnail">
+      <div class="project-content">
+        <h3>Book Recommendation System</h3>
+        <p>Suggests top 5 similar Books using content-based filtering. Built with Python, Pandas, and Streamlit for real-time user input.</p><br>
+        <button class="btn" onclick="openModal('bookModal')">🎬 Watch Demo</button>
+      </div>
+      </div>
       <!-- Project 6 -->
       <div class="project-card" data-aos="zoom-in" data-aos-delay="1200">
       <div class="project-badge">Movie Recommendation</div>
@@ -751,6 +760,18 @@ function closeModal(id) {
   </div>
 </div>
 
+<div id="bookModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('bookModal')">&times;</span>
+    <h2>Book Recommendation System Demo</h2>
+    <video id="bookVideo" width="100%" controls>
+      <source src="books_recommander_system.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <br><br>
+    <a href="https://github.com/Vamsidhar-11/Book_recommander_system" class="btn" target="_blank">🔗 GitHub Repo</a>
+  </div>
+</div>
 </body>
 <script>
   function openModal(id) {

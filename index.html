@@ -206,6 +206,24 @@
         transform: translateY(-5px);
     }
 
+    .try_it_btn {
+        background-color: rgb(71, 7, 7);
+        color: white;
+        padding: 0.9rem 1.9rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+        font-family: 'Karla', sans-serif;
+        font-size: large;
+        font-weight: 500;
+        transition: all 0.25s ease;
+        cursor: pointer;
+    }
+    .try_it_btn:hover {
+        background-color: rgba(145, 18, 18, 0.1);
+        box-shadow: 0 5px 15px rgba(165, 15, 15, 0.1);
+        transform: translateY(-5px);
+    }
+
 
     /* --- Section Styles --- */
     .section {
@@ -902,24 +920,20 @@
         <div class="skills-group">
         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><p>HTML5</p></div>
         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><p>CSS3</p></div>
-        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><p>JavaScript</p></div>
-        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><p>React</p></div>
         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><p>Bootstrap</p></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><p>Node.js</p></div>
+        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"><p>Express.js</p></div>
         </div>
 
         <!-- Backend & Programming (Combined + Scroller) -->
         <h3 class="domain-title">Backend & Programming</h3>
-        <div class="scroller fast-scroll" data-aos="fade-up">
-        <div class="scroller-inner">
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><p>Node.js</p></div>
-            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"><p>Express.js</p></div>
+        <div class="skills-group">
             <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django"><p>Django</p></div>
             <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"><p>Flask</p></div>
             <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p></div>
             <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R"><p>R</p></div>
             <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"><p>NumPy</p></div>
             <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"><p>Pandas</p></div>
-        </div>
         </div>
 
         <!-- Databases (Static) -->
@@ -951,7 +965,7 @@
         <!-- Cloud & DevOps (Static) -->
         <h3 class="domain-title">Cloud & DevOps</h3>
         <div class="skills-group">
-        <div class="skill-card"><img src="AWS.png" alt="AWS"><p>AWS</p></div>
+        <div class="skill-card"><img src="aws.png" alt="AWS"><p>AWS</p></div>
         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"><p>GCP</p></div>
         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><p>Docker</p></div>
         <div class="skill-card"><img src="power_bi.png" alt="Power BI"><p>Power BI</p></div>
@@ -990,7 +1004,7 @@
       <!-- Second Education Item -->
       <div class="timeline-item" data-aos="fade-left">
         <div class="timeline-content">
-          <img src="https://placehold.co/100x100/FFFFFF/000000?text=KBN" alt="K.B.N College" class="company-logo">
+          <img src="kbn_logo.png" alt="K.B.N College" class="company-logo">
           <div class="timeline-text">
             <h3>BSc in Statistics - K.B.N College</h3>
             <p><em>2020 – 2023 | GPA: 7.12</em></p>
@@ -1070,6 +1084,7 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
             <div class="grid-layout">
+                <div class="card" data-aos="fade-up"><img src="know_doc_logo_1.png" alt="KnowDocs Chatbot"><div class="card-content"><h3>KnowDocs Chatbot</h3><p>A Document RAG Q&A Chatbot with Quiz Mode & Multilingual Support.</p><a href="https://knowdocs-q-a-chatbot-l96ghrrdtethzkyejejq45.streamlit.app/" class="try_it_btn">►Try it</a></div></div>
                 <div class="card" data-aos="fade-up"><img src="https://placehold.co/600x400/772244/ffffff?text=Blog+QnA+Chatbot" alt="Blog Q&A Chatbot"><div class="card-content"><h3>Blog Q&A Chatbot</h3><p>Retrieval-Augmented Generation (RAG) chatbot trained on blogs for precise content-based Q&A.</p><a href="blog_q_n_a_chatbot.html" class="btn">View Details</a></div></div>
                 <div class="card" data-aos="fade-up"><img src="https://placehold.co/600x400/004466/ffffff?text=AskAI" alt="AskAI"><div class="card-content"><h3>AskAI – AI Q&A Assistant</h3><p>Interactive AI-powered assistant for answering general knowledge and domain-specific queries.</p><a href="askai-details.html" class="btn">View Details</a></div></div>
                 <div class="card" data-aos="fade-up"><img src="https://placehold.co/600x400/112240/64ffda?text=Book+Recommender" alt="Book Recommender"><div class="card-content"><h3>Book Recommendation System</h3><p>Suggests top 5 similar Books using content-based filtering and Streamlit.</p><a href="book-details.html" class="btn">🎬 Watch Demo</a></div></div>
@@ -1171,14 +1186,12 @@
 
   // Typed.js text effect
   const typed = new Typed('.typed-text', {
-    strings: [
-      'Data Scientist', 
-      'AI Enthusiast', 
-      'ML Engineer', 
-      'NLP Engineer',
-      'MERN Stack Developer', 
-      'Business Analyst',
-      'Power BI Developer'
+    strings: [  
+    'Data Scientist',
+    'Data Engineer',
+    'AI Engineer',
+    'Data Analyst',
+    'AI/ML Engineer'
     ],
     typeSpeed: 50,
     backSpeed: 25,
@@ -1234,4 +1247,3 @@
 </script>
 </body>
 </html>
-
